@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+
+
+
+# In[18]:
+
+
+""""
+Test the Law of Large Numbers for N random normally distributed numbers with
+mean=0 and standard deviation=1
+
+Create a Python script that will count how many of these numbers fall between -1 and 1 
+and divide that by the total quantity N
+You Know that E(X)=68.2% # expected value
+check that the mean(Xn) is closer to E(X) as you rerun our script while increasing N.
+"""
+
+N=10000 # larger the value of N mean is more closer to 68.2%
+counter=0 # count of numners between -1 ans 1
+
+import numpy as np
+from numpy.random import randn
+for i in randn(N):
+    if i>-1 and i<1:
+        counter+=1
+print("Number between -1 and 1:",counter, "Mean %:",counter/N)        
+
+
+
+
+
+# In[ ]:
+
+
+
+
